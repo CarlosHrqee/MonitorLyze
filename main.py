@@ -4,7 +4,7 @@ import os
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/scrape")
 async def root():
     async with async_playwright() as p:
         browser = await p.chromium.connect(os.environ['BROWSER_PLAYWRIGHT_ENDPOINT'])
@@ -14,7 +14,7 @@ async def root():
 
         await page.set_viewport_size({'width': 1920, 'height': 1080});
 
-        await page.goto('https://example.com')
+        await page.goto('https://google.com')
         screenshot_bytes = await page.screenshot()
 
         await browser.close()
