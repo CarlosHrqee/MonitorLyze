@@ -4,7 +4,7 @@ FROM python:3.11-slim
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
-ENV PORT=5000  # Defina o valor padrão da porta
+ENV PORT=5000
 
 # Instalando dependências necessárias
 RUN apt-get update && apt-get install -y --no-install-recommends \
