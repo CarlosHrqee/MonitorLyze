@@ -14,7 +14,7 @@ async def root():
 
         await page.set_viewport_size({'width': 1920, 'height': 1080});
 
-        await page.goto('https://google.com')
+        await page.goto('https://railway.app')
         screenshot_bytes = await page.screenshot()
 
         await browser.close()
